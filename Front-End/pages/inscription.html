@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inscription Moukela</title>
+    <link rel="stylesheet" href="/GLOBAL/inscription.css">
+</head>
+<body>
+    <div class="container">
+        <h2>FAITES VOUS ENREGISTRER POUR PRENDRE UN RENDEZ-VOUS</h2>
+        <form id="inscriptionForm">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="text" id="telephone" name="telephone" required>
+          </div>
+          <div class="form-group">
+            <label for="besoin">Statut</label>
+            <select id="statut" name="statut" required>
+              <option value="">Sélectionnez votre Statut</option>
+              <option value="Etudiant(e)">Etudiant(e)</option>
+              <option value="Fonctionnaire public">Fonctionnaire public</option>
+              <option value="Fonctionnaire privé">Fonctionnaire privé</option>
+              <option value="Retraité">Retraité</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="besoin">Besoin</label>
+            <select id="besoin" name="besoin" required>
+              <option value="">Sélectionnez votre besoin</option>
+              <option value="Détachement">Détachement</option>
+              <option value="Basculement">Basculement</option>
+              <option value="Etablissement">Etablissement</option>
+              <option value="Renouvellement">Renouvellement</option>
+            </select>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="conditions" name="conditions" required>
+            <label for="conditions">Je confirme mes informations.</label>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+        <p class="info">Les données recueillies sont destinées au traitement de votre demande.</p>
+      </div>
+      
+      <script>
+      document.getElementById('inscriptionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        var nom = document.getElementById('nom').value;
+        var prenom = document.getElementById('prenom').value;
+        var email = document.getElementById('email').value;
+        var telephone = document.getElementById('telephone').value;
+        var statut = document.getElementById('statut').value;
+        var besoin = document.getElementById('besoin').value;
+        
+        if (nom && prenom && email && telephone  && statut && besoin) {
+          alert('Votre inscription a été enregistrée avec succès!\n\n' +
+                'Nom: ' + nom + '\n' +
+                'Prénom: ' + prenom + '\n' +
+                'Email: ' + email + '\n' +
+                'Téléphone: ' + telephone + '\n' +
+                'Statut: ' + statut + '\n' +
+                'Besoin: ' + besoin);
+          
+          // Ici, vous pourriez envoyer les données à un serveur
+          // Pour cet exemple, nous réinitialisons simplement le formulaire
+          this.reset();
+        } else {
+          alert('Veuillez remplir tous les champs obligatoires.');
+        }
+      });
+      </script>
+</body>
+</html>
