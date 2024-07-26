@@ -13,23 +13,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   height: 100%;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assetes/CNAMGS-0986-e1691351391484\ 3.svg') no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./public/IMG\ CNAMGS.jpeg') no-repeat center center fixed;
   background-size: cover;
 }
 
 
 header {
-  background-color: #1a2942;
+  background-color: #003399;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -77,6 +79,11 @@ p {
   font-size: 16px;
   cursor: pointer;
 }
+
+.cta-button:hover {
+  background-color: #538d55;
+}
+
 .phone {
   display: flex;
   position: relative;
@@ -86,7 +93,7 @@ p {
 
 }
 footer {
-  background-color: #1a2942;
+  background-color: #003399;
   padding: 10px 0;
   display: flex;
   justify-content: center;

@@ -42,7 +42,8 @@ body {
     display: block;
   }
   .dropdown-menu a:hover {
-    background-color: #f1f1f1;
+    color: white;
+    background-color: #4CAF50;
   }
   .main-content {
     padding: 20px;
@@ -62,6 +63,10 @@ body {
     cursor: pointer;
     font-size: 16px;
     border-radius: 10px;
+  }
+
+  .appointment-button:hover {
+    background-color: #538d55;
   }
 
   .slider {
@@ -86,7 +91,7 @@ body {
   .news-grid {
     display: flex;
       width: calc(250px * 8); /* Ajustez en fonction du nombre d'images */
-      animation: scroll 20s linear infinite;
+      animation: scroll 60s linear infinite;
     gap: 20px;
   }
   .news-item {
